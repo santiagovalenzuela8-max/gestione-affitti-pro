@@ -1,3 +1,5 @@
+import { Reveal } from "./Reveal";
+
 const results = [
   { value: "+31%", label: "incasso medio nel primo anno di gestione" },
   { value: "78%", label: "tasso di occupazione medio annuo" },
@@ -10,7 +12,7 @@ export function Results() {
     <section id="risultati" className="bg-noir py-24 text-paper">
       <div className="hairline-gold h-px w-full" />
       <div className="mx-auto max-w-6xl px-6 pt-14">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-400">
             Risultati concreti
           </p>
@@ -21,17 +23,18 @@ export function Results() {
             Ogni proprietario riceve accesso a un dashboard con prenotazioni, incassi e
             recensioni in tempo reale: nessuna sorpresa a fine mese.
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-14 grid grid-cols-2 gap-8 lg:grid-cols-4">
-          {results.map((result) => (
-            <div
+          {results.map((result, index) => (
+            <Reveal
               key={result.label}
+              delay={index * 100}
               className="border border-white/10 bg-white/5 p-6 text-center"
             >
               <p className="font-serif text-4xl text-cyan-400">{result.value}</p>
               <p className="mt-2 text-sm text-paper/70">{result.label}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

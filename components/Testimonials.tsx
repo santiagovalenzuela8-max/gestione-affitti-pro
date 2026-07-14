@@ -1,4 +1,5 @@
 import { IconStar } from "./icons";
+import { Reveal } from "./Reveal";
 
 const testimonials = [
   {
@@ -25,19 +26,20 @@ export function Testimonials() {
   return (
     <section className="bg-paper-dim py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
             Chi si è già affidato a noi
           </p>
           <h2 className="mt-4 font-serif text-3xl text-ink sm:text-4xl">
             Proprietari che dormono sonni tranquilli
           </h2>
-        </div>
+        </Reveal>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <figure
+          {testimonials.map((testimonial, index) => (
+            <Reveal
               key={testimonial.name}
+              delay={index * 100}
               className="flex flex-col justify-between border-t-2 border-gold-500 bg-paper p-7 shadow-sm shadow-ink/5"
             >
               <div>
@@ -54,7 +56,7 @@ export function Testimonials() {
                 <p className="font-semibold text-ink">{testimonial.name}</p>
                 <p className="text-ink-soft">{testimonial.location}</p>
               </figcaption>
-            </figure>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -1,3 +1,5 @@
+import { Reveal } from "./Reveal";
+
 const platforms = ["Airbnb", "Booking.com", "Vrbo", "Expedia"];
 
 const stats = [
@@ -24,11 +26,11 @@ export function TrustBar() {
         </div>
 
         <div className="mt-12 grid grid-cols-2 gap-8 border-t border-white/10 pt-10 sm:grid-cols-4">
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
+          {stats.map((stat, index) => (
+            <Reveal key={stat.label} delay={index * 90} className="text-center">
               <p className="font-serif text-3xl text-cyan-400">{stat.value}</p>
               <p className="mt-1 text-sm text-paper/70">{stat.label}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

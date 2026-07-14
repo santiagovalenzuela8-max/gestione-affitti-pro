@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { IconClose, IconMenu } from "./icons";
+import { Logo } from "./Logo";
 
 const links = [
   { href: "#servizi", label: "Servizi" },
@@ -17,11 +18,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-paper-line/80 bg-paper/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:py-5">
-        <a href="#top" className="flex items-baseline gap-1.5">
-          <span className="font-serif text-lg font-semibold tracking-tight text-ink lg:text-xl">
-            Gestione Affitti
+        <a href="#top" className="flex items-center gap-2.5">
+          <Logo className="h-8 w-8" />
+          <span className="flex items-baseline gap-1.5">
+            <span className="font-serif text-lg font-semibold tracking-tight text-ink lg:text-xl">
+              Gestione Affitti
+            </span>
+            <span className="font-serif text-lg italic text-gold-600 lg:text-xl">Pro</span>
           </span>
-          <span className="font-serif text-lg italic text-gold-600 lg:text-xl">Pro</span>
         </a>
 
         <nav className="hidden items-center gap-10 lg:flex">

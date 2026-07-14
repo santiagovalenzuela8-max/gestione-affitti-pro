@@ -1,3 +1,5 @@
+import { Reveal } from "./Reveal";
+
 const steps = [
   {
     number: "01",
@@ -29,25 +31,25 @@ export function Process() {
   return (
     <section id="come-funziona" className="bg-paper-dim py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
             Come funziona
           </p>
           <h2 className="mt-4 font-serif text-3xl text-ink sm:text-4xl">
             Dalla prima chiamata al primo bonifico
           </h2>
-        </div>
+        </Reveal>
 
         <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
-            <div key={step.number} className="relative pl-1">
+            <Reveal key={step.number} delay={index * 100} className="relative pl-1">
               <span className="font-serif text-5xl text-gold-300">{step.number}</span>
               <h3 className="mt-4 font-serif text-lg text-ink">{step.title}</h3>
               <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">{step.description}</p>
               {index < steps.length - 1 ? (
                 <div className="mt-6 hidden h-px w-full bg-gradient-to-r from-gold-300/70 to-transparent lg:block" />
               ) : null}
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

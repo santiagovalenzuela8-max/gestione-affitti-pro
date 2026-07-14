@@ -1,4 +1,5 @@
 import { IconMail, IconPhone } from "./icons";
+import { Logo } from "./Logo";
 
 const links = [
   { href: "#servizi", label: "Servizi" },
@@ -14,9 +15,12 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-10 sm:grid-cols-3">
           <div>
-            <p className="flex items-baseline gap-1.5">
-              <span className="font-serif text-xl font-semibold">Gestione Affitti</span>
-              <span className="font-serif text-xl italic text-gold-400">Pro</span>
+            <p className="flex items-center gap-2.5">
+              <Logo className="h-8 w-8" variant="white" />
+              <span className="flex items-baseline gap-1.5">
+                <span className="font-serif text-xl font-semibold">Gestione Affitti</span>
+                <span className="font-serif text-xl italic text-gold-400">Pro</span>
+              </span>
             </p>
             <p className="mt-3 max-w-xs text-sm text-paper/60">
               Gestione professionale di affitti brevi su Airbnb e Booking a Verona, sul Lago di
