@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-ink: #0a0a0b;
+  --color-ink-soft: #55565c;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-paper: #ffffff;
+  --color-paper-dim: #f6f5f3;
+  --color-paper-line: #e5e3df;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-noir: #0a0a0b;
+  --color-noir-soft: #17181b;
+  --color-noir-line: #2a2b2f;
+
+  --color-cyan-600: #0e97b0;
+  --color-cyan-500: #1bbad8;
+  --color-cyan-400: #4ecbe2;
+  --color-cyan-100: #d9f4f9;
+
+  --color-gold-700: #8a6d2f;
+  --color-gold-600: #a5843c;
+  --color-gold-500: #c6a15b;
+  --color-gold-300: #e4d3ab;
+  --color-gold-100: #f4ecd9;
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.hairline-gold {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gold-500) 15%,
+    var(--color-gold-500) 85%,
+    transparent
+  );
 }
