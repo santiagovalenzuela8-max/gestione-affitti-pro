@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { IconCheck, IconMail, IconPhone } from "./icons";
+import { IconCheck, IconPhone } from "./icons";
 
 export function ContactCTA() {
   const [submitted, setSubmitted] = useState(false);
@@ -44,13 +44,6 @@ export function ContactCTA() {
               <a href="tel:+393488307749" className="flex items-center gap-2.5 hover:text-ink">
                 <IconPhone className="h-4.5 w-4.5 text-gold-600" />
                 +39 348 830 7749
-              </a>
-              <a
-                href="mailto:info@gestioneaffittipro.it"
-                className="flex items-center gap-2.5 hover:text-ink"
-              >
-                <IconMail className="h-4.5 w-4.5 text-gold-600" />
-                info@gestioneaffittipro.it
               </a>
             </div>
           </div>
