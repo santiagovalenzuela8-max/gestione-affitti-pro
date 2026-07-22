@@ -41,9 +41,9 @@ export function ContactCTA() {
             </ul>
 
             <div className="mt-9 space-y-3 border-t border-paper-line pt-6 text-sm text-ink-soft">
-              <a href="tel:+390451234567" className="flex items-center gap-2.5 hover:text-ink">
+              <a href="tel:+393488307749" className="flex items-center gap-2.5 hover:text-ink">
                 <IconPhone className="h-4.5 w-4.5 text-gold-600" />
-                +39 045 123 4567
+                +39 348 830 7749
               </a>
               <a
                 href="mailto:info@gestioneaffittipro.it"

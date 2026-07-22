@@ -49,7 +49,7 @@ export function Footer() {
             </p>
             <ul className="mt-4 space-y-2.5 text-sm text-paper/70">
               <li className="flex items-center gap-2">
-                <IconPhone className="h-4 w-4" /> +39 045 123 4567
+                <IconPhone className="h-4 w-4" /> +39 348 830 7749
               </li>
               <li className="flex items-center gap-2">
                 <IconMail className="h-4 w-4" /> info@gestioneaffittipro.it
@@ -61,8 +61,20 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Gestione Affitti Pro. Tutti i diritti riservati.</p>
-          <p>P.IVA 00000000000</p>
         </div>
+
+        <p className="mt-4 text-center text-[11px] tracking-wide text-paper/30 sm:text-right">
+          Sito creato da{" "}
+          <a
+            href="https://andiamo-online.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-paper/50 underline decoration-paper/20 underline-offset-2 transition hover:text-gold-400 hover:decoration-gold-400/50"
+          >
+            AndiamOnline
+          </a>
+          .
+        </p>
       </div>
     </footer>
   );
