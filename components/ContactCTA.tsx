@@ -5,10 +5,35 @@ import { IconCheck, IconPhone } from "./icons";
 
 export function ContactCTA() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    setError(null);
+    setSending(true);
+
+    const form = event.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const response = await fetch("/api/contatti", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const result = (await response.json().catch(() => null)) as { error?: string } | null;
+        throw new Error(result?.error ?? "Errore durante l'invio della richiesta.");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Errore durante l'invio della richiesta.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -131,11 +156,16 @@ export function ContactCTA() {
                   />
                 </label>
 
+                {error && (
+                  <p className="text-sm font-medium text-red-600 sm:col-span-2">{error}</p>
+                )}
+
                 <button
                   type="submit"
-                  className="mt-2 rounded-full bg-ink px-7 py-3.5 text-base font-semibold text-paper shadow-lg shadow-ink/15 transition hover:bg-noir-soft sm:col-span-2"
+                  disabled={sending}
+                  className="mt-2 rounded-full bg-ink px-7 py-3.5 text-base font-semibold text-paper shadow-lg shadow-ink/15 transition hover:bg-noir-soft disabled:cursor-not-allowed disabled:opacity-60 sm:col-span-2"
                 >
-                  Invia richiesta
+                  {sending ? "Invio in corso..." : "Invia richiesta"}
                 </button>
               </form>
             )}
