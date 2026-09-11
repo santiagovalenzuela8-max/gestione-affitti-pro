@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { IconArrowRight, IconStar } from "./icons";
 
 export function Hero() {
@@ -34,13 +35,13 @@ export function Hero() {
             className="animate-fade-up mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
             style={{ animationDelay: "270ms" }}
           >
-            <a
-              href="#contatti"
+            <Link
+              href="/contatti"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 text-base font-semibold text-paper shadow-lg shadow-ink/15 transition hover:bg-noir-soft hover:shadow-xl hover:-translate-y-0.5"
             >
               Richiedi una valutazione gratuita
               <IconArrowRight className="h-4.5 w-4.5 transition group-hover:translate-x-0.5" />
-            </a>
+            </Link>
             <a
               href="#servizi"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/20 px-7 py-3.5 text-base font-semibold text-ink transition hover:border-ink/40 hover:bg-paper-dim"

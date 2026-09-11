@@ -37,22 +37,15 @@ export function ContactCTA() {
   }
 
   return (
-    <section id="contatti" className="bg-paper py-24">
+    <section className="bg-paper py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-12 border border-paper-line bg-paper p-8 shadow-sm shadow-ink/5 lg:grid-cols-[0.9fr_1.1fr] lg:p-12">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
-              Parliamone
-            </p>
-            <h2 className="mt-4 font-serif text-3xl text-ink sm:text-4xl">
-              Richiedi una valutazione gratuita della tua casa
+            <h2 className="font-serif text-2xl text-ink sm:text-3xl">
+              Nessuna sorpresa, solo trasparenza
             </h2>
-            <p className="mt-4 text-lg text-ink-soft">
-              Ti rispondiamo entro 24 ore con una stima realistica di incasso e occupazione,
-              senza impegno.
-            </p>
 
-            <ul className="mt-8 space-y-3">
+            <ul className="mt-6 space-y-3">
               {[
                 "Nessun costo per la valutazione",
                 "Nessun vincolo di esclusiva",

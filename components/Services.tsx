@@ -35,22 +35,9 @@ const services = [
 
 export function Services() {
   return (
-    <section id="servizi" className="bg-paper py-24">
+    <section className="bg-paper py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <Reveal className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
-            Cosa facciamo
-          </p>
-          <h2 className="mt-4 font-serif text-3xl text-ink sm:text-4xl">
-            Un unico referente per tutto ciò che serve alla tua casa vacanze
-          </h2>
-          <p className="mt-4 text-lg text-ink-soft">
-            Dall’annuncio online al bucato, dal check-in alla dichiarazione dei redditi:
-            gestiamo ogni dettaglio dell’affitto breve così tu devi solo controllare l’incasso.
-          </p>
-        </Reveal>
-
-        <div className="mt-14 grid gap-px overflow-hidden border border-paper-line bg-paper-line sm:grid-cols-2">
+        <div className="grid gap-px overflow-hidden border border-paper-line bg-paper-line sm:grid-cols-2">
           {services.map((service, index) => (
             <Reveal
               key={service.title}

@@ -1,12 +1,13 @@
+import Link from "next/link";
 import { IconPhone, IconWhatsApp } from "./icons";
 import { Logo } from "./Logo";
 
 const links = [
-  { href: "#servizi", label: "Servizi" },
-  { href: "#come-funziona", label: "Come funziona" },
-  { href: "#zone", label: "Zone servite" },
-  { href: "#risultati", label: "Risultati" },
-  { href: "#contatti", label: "Contatti" },
+  { href: "/servizi", label: "Servizi" },
+  { href: "/come-funziona", label: "Come funziona" },
+  { href: "/#zone", label: "Zone servite" },
+  { href: "/#risultati", label: "Risultati" },
+  { href: "/contatti", label: "Contatti" },
 ];
 
 export function Footer() {
@@ -35,9 +36,9 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-paper/70">
               {links.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="hover:text-paper">
+                  <Link href={link.href} className="hover:text-paper">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

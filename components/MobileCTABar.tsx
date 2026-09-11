@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IconPhone } from "./icons";
 
 export function MobileCTABar() {
@@ -10,12 +11,12 @@ export function MobileCTABar() {
       >
         <IconPhone className="h-4.5 w-4.5 text-cyan-400" />
       </a>
-      <a
-        href="#contatti"
+      <Link
+        href="/contatti"
         className="flex flex-1 items-center justify-center gap-2 bg-ink px-5 py-3.5 text-sm font-semibold uppercase tracking-wider text-paper"
       >
         Valutazione gratuita
-      </a>
+      </Link>
     </div>
   );
 }
