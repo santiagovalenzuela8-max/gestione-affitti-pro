@@ -1,4 +1,4 @@
-import { IconPhone } from "./icons";
+import { IconPhone, IconWhatsApp } from "./icons";
 import { Logo } from "./Logo";
 
 const links = [
@@ -50,6 +50,16 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm text-paper/70">
               <li className="flex items-center gap-2">
                 <IconPhone className="h-4 w-4" /> +39 348 830 7749
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/393488307749"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-paper"
+                >
+                  <IconWhatsApp className="h-4 w-4 text-[#25D366]" /> WhatsApp
+                </a>
               </li>
               <li>Verona · Lago di Garda · Trentino</li>
             </ul>

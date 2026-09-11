@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { IconCheck, IconPhone } from "./icons";
+import { IconCheck, IconPhone, IconWhatsApp } from "./icons";
 
 export function ContactCTA() {
   const [submitted, setSubmitted] = useState(false);
@@ -69,6 +69,15 @@ export function ContactCTA() {
               <a href="tel:+393488307749" className="flex items-center gap-2.5 hover:text-ink">
                 <IconPhone className="h-4.5 w-4.5 text-gold-600" />
                 +39 348 830 7749
+              </a>
+              <a
+                href="https://wa.me/393488307749?text=Ciao%2C%20vorrei%20una%20valutazione%20gratuita%20della%20mia%20casa%20vacanze"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 hover:text-ink"
+              >
+                <IconWhatsApp className="h-4.5 w-4.5 text-[#25D366]" />
+                Scrivici su WhatsApp
               </a>
             </div>
           </div>

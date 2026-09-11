@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { IconArrowRight, IconStar } from "./icons";
 
 export function Hero() {
@@ -74,12 +75,20 @@ export function Hero() {
           className="animate-fade-up relative mx-auto aspect-[4/5] w-full max-w-md lg:max-w-none"
           style={{ animationDelay: "220ms" }}
         >
-          <div className="absolute inset-0 rounded-[1.5rem] bg-gradient-to-br from-noir via-noir-soft to-noir shadow-2xl shadow-ink/30" />
-          <div className="absolute inset-4 rounded-[1.1rem] border border-white/10" />
-          <div className="animate-float-slow absolute -right-6 -top-6 h-40 w-40 rounded-full bg-cyan-500/30 blur-3xl" />
-          <div className="animate-float-slower absolute left-8 top-14 h-24 w-24 rounded-full bg-gold-500/40 blur-2xl" />
-
-          <div className="absolute inset-x-8 top-10 hairline-gold h-px" />
+          <div className="absolute inset-0 overflow-hidden rounded-[1.5rem] shadow-2xl shadow-ink/30">
+            <Image
+              src="/images/hero/villa-lago.jpg"
+              alt="Villa vacanze con piscina panoramica sul Lago di Garda"
+              fill
+              priority
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-noir/70 via-noir/0 to-noir/10" />
+          </div>
+          <div className="pointer-events-none absolute inset-4 rounded-[1.1rem] border border-white/20" />
+          <div className="animate-float-slow pointer-events-none absolute -right-6 -top-6 h-40 w-40 rounded-full bg-cyan-500/20 blur-3xl" />
+          <div className="animate-float-slower pointer-events-none absolute left-8 top-14 h-24 w-24 rounded-full bg-gold-500/20 blur-2xl" />
 
           <div className="absolute bottom-7 left-7 right-7 rounded-xl border border-gold-500/20 bg-paper/95 p-5 shadow-xl backdrop-blur">
             <p className="font-serif text-sm italic text-ink">

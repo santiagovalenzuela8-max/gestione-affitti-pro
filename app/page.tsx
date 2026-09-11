@@ -8,6 +8,7 @@ import { Results } from "@/components/Results";
 import { Services } from "@/components/Services";
 import { Testimonials } from "@/components/Testimonials";
 import { TrustBar } from "@/components/TrustBar";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Zones } from "@/components/Zones";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       </main>
       <Footer />
       <MobileCTABar />
+      <WhatsAppButton />
     </>
   );
 }

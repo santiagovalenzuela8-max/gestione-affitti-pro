@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { IconStar } from "./icons";
 import { Reveal } from "./Reveal";
 
@@ -7,18 +8,21 @@ const testimonials = [
       "Prima gestivo tutto da sola: messaggi agli ospiti, pulizie, prezzi. Ora ricevo solo il bonifico a fine mese e l’incasso è più alto di prima.",
     name: "Elena Bertani",
     location: "Proprietaria a Bardolino",
+    photo: "/images/testimonials/elena-bertani.jpg",
   },
   {
     quote:
       "Avevamo un appartamento a Trento quasi sempre vuoto. In sei mesi l’occupazione è passata dal 40% al 75%.",
     name: "Marco e Giulia Conti",
     location: "Proprietari a Trento",
+    photo: "/images/testimonials/conti.jpg",
   },
   {
     quote:
       "La cosa che apprezzo di più è la trasparenza: vedo ogni prenotazione e ogni spesa in tempo reale sul report.",
     name: "Roberto Salvi",
     location: "Proprietario a Sirmione",
+    photo: "/images/testimonials/roberto-salvi.jpg",
   },
 ];
 
@@ -52,9 +56,20 @@ export function Testimonials() {
                   &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
               </div>
-              <figcaption className="mt-6 text-sm">
-                <p className="font-semibold text-ink">{testimonial.name}</p>
-                <p className="text-ink-soft">{testimonial.location}</p>
+              <figcaption className="mt-6 flex items-center gap-3 text-sm">
+                <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border border-paper-line">
+                  <Image
+                    src={testimonial.photo}
+                    alt={testimonial.name}
+                    fill
+                    sizes="44px"
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold text-ink">{testimonial.name}</p>
+                  <p className="text-ink-soft">{testimonial.location}</p>
+                </div>
               </figcaption>
             </Reveal>
           ))}

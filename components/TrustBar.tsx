@@ -1,6 +1,12 @@
+import { AirbnbLogo, BookingLogo, ExpediaLogo, VrboLogo } from "./PlatformLogos";
 import { Reveal } from "./Reveal";
 
-const platforms = ["Airbnb", "Booking.com", "Vrbo", "Expedia"];
+const platforms = [
+  { name: "Airbnb", Logo: AirbnbLogo },
+  { name: "Booking.com", Logo: BookingLogo },
+  { name: "Vrbo", Logo: VrboLogo },
+  { name: "Expedia", Logo: ExpediaLogo },
+];
 
 const stats = [
   { value: "120+", label: "immobili in gestione" },
@@ -17,11 +23,14 @@ export function TrustBar() {
         <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-gold-300">
           Presenti sulle piattaforme che contano
         </p>
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
           {platforms.map((platform) => (
-            <span key={platform} className="font-serif text-xl italic text-paper/90">
-              {platform}
-            </span>
+            <div
+              key={platform.name}
+              className="flex h-11 items-center rounded-full bg-paper px-5 shadow-sm"
+            >
+              <platform.Logo className="text-base" />
+            </div>
           ))}
         </div>
 
