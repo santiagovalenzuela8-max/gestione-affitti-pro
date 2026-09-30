@@ -8,6 +8,7 @@ const links = [
   { href: "/#zone", label: "Zone servite" },
   { href: "/#risultati", label: "Risultati" },
   { href: "/contatti", label: "Contatti" },
+  { href: "/area-clienti", label: "Area Clienti" },
 ];
 
 export function Footer() {

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import {
   IconArrowRight,
   IconClose,
+  IconLock,
   IconMenu,
   IconPhone,
   IconWhatsApp,
@@ -81,7 +82,14 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden lg:block">
+          <div className="hidden items-center gap-5 lg:flex">
+            <Link
+              href="/area-clienti"
+              className="flex items-center gap-1.5 text-[13px] font-medium text-ink-soft transition hover:text-ink"
+            >
+              <IconLock className="h-3.5 w-3.5" />
+              Area Clienti
+            </Link>
             <Link
               href="/contatti"
               className="rounded-full bg-ink px-6 py-2.5 text-[13px] font-semibold uppercase tracking-wider text-paper transition hover:bg-noir-soft"
@@ -146,7 +154,7 @@ export function Header() {
               Valutazione gratuita
               <IconArrowRight className="h-4.5 w-4.5" />
             </Link>
-            <div className="flex items-center justify-center gap-6 pt-2 text-sm text-paper/70">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 pt-2 text-sm text-paper/70">
               <a
                 href="tel:+393488307749"
                 className="flex items-center gap-2 hover:text-paper"
@@ -163,6 +171,10 @@ export function Header() {
                 <IconWhatsApp className="h-4 w-4 text-[#25D366]" />
                 WhatsApp
               </a>
+              <Link href="/area-clienti" className="flex items-center gap-2 hover:text-paper">
+                <IconLock className="h-4 w-4 text-gold-400" />
+                Area Clienti
+              </Link>
             </div>
           </div>
         </div>

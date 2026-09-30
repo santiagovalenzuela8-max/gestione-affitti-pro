@@ -121,6 +121,42 @@ export function IconWhatsApp({ className }: IconProps) {
   );
 }
 
+export function IconLock({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={base} stroke="currentColor" className={className}>
+      <rect x="5" y="11" width="14" height="9" rx="2" />
+      <path strokeLinecap="round" d="M8 11V7a4 4 0 0 1 8 0v4" />
+    </svg>
+  );
+}
+
+export function IconLogOut({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={base} stroke="currentColor" className={className}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 4H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M10 12h11m0 0-3.5-3.5M21 12l-3.5 3.5" />
+    </svg>
+  );
+}
+
+export function IconPlus({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={base} stroke="currentColor" className={className}>
+      <path strokeLinecap="round" d="M12 4v16M4 12h16" />
+    </svg>
+  );
+}
+
+export function IconUsers({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={base} stroke="currentColor" className={className}>
+      <circle cx="9" cy="8" r="3.2" />
+      <path strokeLinecap="round" d="M3.5 19c0-3 2.5-5.2 5.5-5.2s5.5 2.2 5.5 5.2" />
+      <path strokeLinecap="round" d="M15.5 5.2a3.2 3.2 0 0 1 0 6M18.5 19c0-2.6-1.9-4.7-4.3-5.1" />
+    </svg>
+  );
+}
+
 export function IconCalendarCheck({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" strokeWidth={base} stroke="currentColor" className={className}>
