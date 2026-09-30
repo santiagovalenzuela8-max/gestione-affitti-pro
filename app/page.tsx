@@ -1,3 +1,4 @@
+import { ClientPortalSection } from "@/components/ClientPortalSection";
 import { ContactBand } from "@/components/ContactBand";
 import { Hero } from "@/components/Hero";
 import { ProcessPreview } from "@/components/ProcessPreview";
@@ -14,6 +15,7 @@ export default function Home() {
       <TrustBar />
       <ServicesPreview />
       <ProcessPreview />
+      <ClientPortalSection />
       <Zones />
       <Results />
       <Testimonials />
